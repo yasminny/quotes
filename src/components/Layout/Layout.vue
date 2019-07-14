@@ -1,6 +1,22 @@
 <template>
   <div class="layout">
-    <test :data="menu"/>
+    <header>
+      <div class="container">
+        <test :data="menu"/>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="content">
+
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+      <test :data="filters"/>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -32,11 +48,48 @@
     },
   ];
 
+  const filters = [
+    {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    }, {
+      name: 'filter',
+    },
+  ];
+
   export default {
     name: 'Layout',
     data() {
       return {
         menu,
+        filters,
       };
     },
     components: { test },
@@ -44,5 +97,34 @@
 </script>
 
 <style>
+.layout {
+  width: 100%;
+  height: 100%;
+  background-color: azure;
+}
 
+  header,
+  footer {
+    width: 100%;
+    height: 70px;
+    background-color: aquamarine;
+  }
+
+  main {
+    width: 100%;
+    height: calc(100% - 200px);
+    margin: 30px 0;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+  }
 </style>
