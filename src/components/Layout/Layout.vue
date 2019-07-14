@@ -8,7 +8,7 @@
     <main>
       <div class="container">
         <div class="content">
-
+          <basic/>
         </div>
       </div>
     </main>
@@ -22,6 +22,7 @@
 
 <script>
   import test from '../test';
+  import basic from '../Slides/Basic';
 
   const menu = [
     {
@@ -92,7 +93,7 @@
         filters,
       };
     },
-    components: { test },
+    components: { test, basic },
   };
 </script>
 
